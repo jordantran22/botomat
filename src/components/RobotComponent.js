@@ -5,7 +5,7 @@ import CountDownTimer from './CountDownTimer';
 import Task from './Task';
 // import { tasks } from './data/robotData';
 
-const RobotComponent = ({robot, randomTasks}) => {
+const RobotComponent = ({robot, randomTasks, deleteRobot}) => {
 
     const [robotTasks, setRobotTasks] = useState([]);
     const [startTasks, setStartTasks] = useState(false);
@@ -40,9 +40,13 @@ const RobotComponent = ({robot, randomTasks}) => {
         return;
       }
 
+      const deleteThisRobot = () => {
+         return deleteRobot();
+      }
 
     return (
         <div>
+            <div className="submitButton delete" onClick={deleteThisRobot}>X</div>
             <div className="robotNameAndType">
                 <div>Robot Name: {robot.name}</div>
                 <div>Robot Type: {robot.type}</div>

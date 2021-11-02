@@ -86,6 +86,11 @@ const Header = () => {
         setRobots([...robots, newRobot]);
         console.log(robots);
     }
+
+    const deleteRobot = (robotId) => {
+       setRobots(robots.filter((robot) => robot.id !== robotId));
+       return;
+    }
       
     return (
         <div>
@@ -117,7 +122,7 @@ const Header = () => {
 
             {robots.map((robot) =>
               <div className="robotComponent">
-               <RobotComponent robot={robot} randomTasks={randomTasks} /> 
+               <RobotComponent robot={robot} randomTasks={randomTasks} deleteRobot={() => deleteRobot(robot.id)} /> 
                </div>
                )
             }
