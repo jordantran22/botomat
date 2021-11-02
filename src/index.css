@@ -1,0 +1,119 @@
+:root {
+  --first-color: #c94c4c;
+  /* --first-color: #c83349; */
+  --second-color: #203647;
+  /* --second-color: 	#696969; */
+  --third-color: #ED1C16;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+body {
+  background-color: white;
+}
+
+
+.robotForm
+{
+    display: block;
+    text-align: center;
+}
+form
+{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+input[type=text] {
+  width: auto;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+.robotNameInput:focus {
+  border: 3px solid var(--first-color);
+}
+
+.robotComponent {
+  display: block;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+  padding: 2rem;
+  width: 30%;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%) !important
+}
+
+.enterNameLabel {
+  color: var(--second-color);
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+.robotSubmitButton {
+  background-color: var(--first-color);
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 15px;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 1rem;
+}
+
+.robotSubmitButton:hover {
+  background-color: var(--third-color);
+}
+
+.logo {
+  width: auto;
+  height: 15rem;
+}
+
+.logoTitle {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: var(--first-color);
+  font-size: 2rem;
+}
+
+.robotSelect {
+  width: auto;
+  padding: 1rem;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color:var(--second-color);
+}
+
+.robotOption {
+  width: auto;
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: var(--second-color);
+}
