@@ -32,21 +32,25 @@ const Task = ({task, hoursMinSecs, deleteTask}) => {
 
     return (
         <div>
-            <div> 
+            <div className="taskNameEtaWithTimer"> 
         
                 {showTask ? 
                             <div>
-                                <div>{task.description}</div>
-                                <div>{Math.floor(task.eta / 1000)}</div> 
+                                <div className="taskDescription">{task.description}</div>
                             </div>
-                        : <div>Completed!</div> }
+                        : <div className="taskCompleted">
+                            <div>Completed!</div>
+                            <img className="checkMarkPng" src="checkMark.png" alt="completed" />
+                            </div> }
 
                 <div>
                 {showTimer ? 
-                    <p>{`${hrs.toString().padStart(2, '0')}:${mins
-                        .toString()
-                        .padStart(2, '0')}:${secs.toString().padStart(2, '0')}`}</p> 
-                    
+                    <div className="timerWithLoader">
+                        <p>{`${hrs.toString().padStart(2, '0')}:${mins
+                            .toString()
+                            .padStart(2, '0')}:${secs.toString().padStart(2, '0')}`}</p> 
+                        <img className="loadingGif" src="loading.gif" alt="loading" />
+                    </div>
                         :
                         <div></div>
                 }

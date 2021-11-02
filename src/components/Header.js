@@ -111,7 +111,7 @@ const Header = () => {
                     })}
                 </select>
                 
-                <input type="submit" value="Create"className="robotSubmitButton"></input>
+                <input type="submit" value="Create"className="submitButton"></input>
             </form>
                 
 

@@ -43,24 +43,38 @@ const RobotComponent = ({robot, randomTasks}) => {
 
     return (
         <div>
-            <div>Robot Name: {robot.name}</div>
-            <div>Robot Type: {robot.type}</div>
-            <button onClick={onClick}>Start Tasks</button>
+            <div className="robotNameAndType">
+                <div>Robot Name: {robot.name}</div>
+                <div>Robot Type: {robot.type}</div>
+            </div>
+            <button className="submitButton" onClick={onClick}>Start Tasks</button>
+            <div className="tasksEtaColumn">
+              <div>Tasks</div>
+              <div>ETA</div>
+            </div>
+          
             {robotTasks.map((task) =>
                <div>
                 
                 {startTasks ? 
                 <Task task = {task} hoursMinSecs={{hours: 0, minutes: 0, seconds: Math.floor(task.eta / 1000)}} deleteTask={() => deleteTask(task.id)} /> 
-                : <div> 
+                : <div className="taskNameAndETA"> 
                     <div>{task.description}</div>
-                    <div>{Math.floor(task.eta / 1000)}</div>
+                    <div>{Math.floor(task.eta / 1000)} seconds</div>
                   </div>
                 }
                 </div>
             )}
 
             {
-                robotTasks.length <= 0 ? <div>All task complete!</div> : <div></div>
+                robotTasks.length <= 0 ?
+                 <div className="taskCompleted">
+                   <div>
+                      All task complete!
+                   </div>
+
+                   <img className="checkMarkPng" src="checkMark.png" alt="checked" />
+                 </div> : <div></div>
             }
             
         </div>
