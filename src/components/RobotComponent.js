@@ -1,9 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
-// import TaskComponent from './TaskComponent';
-import CountDownTimer from './CountDownTimer';
 import Task from './Task';
-// import { tasks } from './data/robotData';
 
 const RobotComponent = ({robot, randomTasks, deleteRobot}) => {
 

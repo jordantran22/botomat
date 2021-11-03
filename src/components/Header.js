@@ -47,8 +47,8 @@ const Header = () => {
       ];
 
     
-      const [robotName, setRobotName] = useState("");
-      const [robotType, setRobotType] = useState("");
+      const [robotName, setRobotName] = useState("Default");
+      const [robotType, setRobotType] = useState("UNIPEDAL");
       const [robots, setRobots] = useState([]);
       const [randomTasks, setRandomTasks] = useState([]);
 
